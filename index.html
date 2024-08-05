@@ -91,7 +91,7 @@
     	
 		
 		
-		<!--customhtml--><div class='customhotspot' id='T1Bedroom'></div><div class='customhotspot' id='T1Kitchen'></div><div class='customhotspot' id='T1Passage'></div><div class='customhotspot' id='Hall'></div><!--customhtml-end-->
+		<!--customhtml--><div class='customhotspot' id='Hall'></div><div class='customhotspot' id='Bedroom'></div><div class='customhotspot' id='Passage'></div><div class='customhotspot' id='Kitchen'></div><!--customhtml-end-->
 		
 		<div id="tmp">
 			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
@@ -115,42 +115,6 @@
 			viewer.addUpdateCallback(function(){});
 			
 			/*panoramas*/
-var T1Bedroom = new PANOLENS.ImagePanorama( "panoramas/T1Bedroom.jpg" );
-			T1Bedroom.addEventListener('progress', onProgress);
-			T1Bedroom.addEventListener('load', function(e){
-				endLoading();
-			});
-			T1Bedroom.addEventListener('enter', function(e){
-				endLoading();
-			});
-			T1Bedroom.addEventListener('click', function(e){
-			});
-
-viewer.add( T1Bedroom );
-var T1Kitchen = new PANOLENS.ImagePanorama( "panoramas/T1Kitchen.jpg" );
-			T1Kitchen.addEventListener('progress', onProgress);
-			T1Kitchen.addEventListener('load', function(e){
-				endLoading();
-			});
-			T1Kitchen.addEventListener('enter', function(e){
-				endLoading();
-			});
-			T1Kitchen.addEventListener('click', function(e){
-			});
-
-viewer.add( T1Kitchen );
-var T1Passage = new PANOLENS.ImagePanorama( "panoramas/T1Passage.jpg" );
-			T1Passage.addEventListener('progress', onProgress);
-			T1Passage.addEventListener('load', function(e){
-				endLoading();
-			});
-			T1Passage.addEventListener('enter', function(e){
-				endLoading();
-			});
-			T1Passage.addEventListener('click', function(e){
-			});
-
-viewer.add( T1Passage );
 var Hall = new PANOLENS.ImagePanorama( "panoramas/Hall.jpg" );
 			Hall.addEventListener('progress', onProgress);
 			Hall.addEventListener('load', function(e){
@@ -166,15 +130,74 @@
 					infospotHall0.position.set( -1852.77, -2865.20, -3644.86 );
 					Hall.add(infospotHall0);
 infospotHall0.addEventListener('click', function(){
-ChangePanorama('T1Kitchen');
+ChangePanorama('Kitchen');
 });
 var infospotHall1 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
 					infospotHall1.position.set( -3737.60, -2769.00, -1812.14 );
 					Hall.add(infospotHall1);
 infospotHall1.addEventListener('click', function(){
-ChangePanorama('T1Passage');
+ChangePanorama('Passage');
 });
 viewer.add( Hall );
+var Bedroom = new PANOLENS.ImagePanorama( "panoramas/Bedroom.jpg" );
+			Bedroom.addEventListener('progress', onProgress);
+			Bedroom.addEventListener('load', function(e){
+				endLoading();
+			});
+			Bedroom.addEventListener('enter', function(e){
+				endLoading();
+			});
+			Bedroom.addEventListener('click', function(e){
+			});
+
+var infospotBedroom0 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
+					infospotBedroom0.position.set( 888.17, -4006.23, 2851.40 );
+					Bedroom.add(infospotBedroom0);
+infospotBedroom0.addEventListener('click', function(){
+ChangePanorama('Passage');
+});
+viewer.add( Bedroom );
+var Passage = new PANOLENS.ImagePanorama( "panoramas/Passage.jpg" );
+			Passage.addEventListener('progress', onProgress);
+			Passage.addEventListener('load', function(e){
+				endLoading();
+			});
+			Passage.addEventListener('enter', function(e){
+				endLoading();
+			});
+			Passage.addEventListener('click', function(e){
+			});
+
+var infospotPassage0 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
+					infospotPassage0.position.set( -2105.25, -3512.81, -2865.34 );
+					Passage.add(infospotPassage0);
+infospotPassage0.addEventListener('click', function(){
+ChangePanorama('Bedroom');
+});
+var infospotPassage1 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
+					infospotPassage1.position.set( 2806.49, -3615.14, 2003.10 );
+					Passage.add(infospotPassage1);
+infospotPassage1.addEventListener('click', function(){
+ChangePanorama('Hall');
+});
+viewer.add( Passage );
+var Kitchen = new PANOLENS.ImagePanorama( "panoramas/Kitchen.jpg" );
+			Kitchen.addEventListener('progress', onProgress);
+			Kitchen.addEventListener('load', function(e){
+				endLoading();
+			});
+			Kitchen.addEventListener('enter', function(e){
+				endLoading();
+			});
+			Kitchen.addEventListener('click', function(e){
+			});
+
+var infospotKitchen0 = new PANOLENS.Infospot( 512, hotspotIcons[12].data, true );
+					infospotKitchen0.position.set( -3534.41, -3475.22, 610.33 );
+					Kitchen.add(infospotKitchen0);
+infospotKitchen0.addEventListener('click', function(){
+});
+viewer.add( Kitchen );
 $(document).ready(function(){ ChangePanorama('Hall'); });
 
 /*panoramas-end*/
@@ -245,16 +268,16 @@
 			viewer.addUpdateCallback(function(){
 				
 				/*viewerupdatecallback*/
-if(viewer.panorama == T1Bedroom){
-}
-
-if(viewer.panorama == T1Kitchen){
-}
-
-if(viewer.panorama == T1Passage){
-}
-
 if(viewer.panorama == Hall){
+}
+
+if(viewer.panorama == Bedroom){
+}
+
+if(viewer.panorama == Passage){
+}
+
+if(viewer.panorama == Kitchen){
 }
 /*viewerupdatecallback-end*/
 				
